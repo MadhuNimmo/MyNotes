@@ -27,7 +27,7 @@
   - Describe the problem
   - State your contributions  , ideally  3-5 of them
   - [How rest of the paper is organized]
-> For each claim in the intro, identify the evidences and forward reference it from the claim
+  - For each claim in the intro, identify the evidences and forward reference it from the claim
 * Overview & Problem Statement
   - Convey the takeaway
 * Problem Statement
