@@ -8,8 +8,11 @@
 * Fundamental problem behind ML is generalization, in particular inductive bias.
 * Most of ML is about induction i.e. creating a general rule from example (specifics to generalities) or generalization 
   as opposed to deduction i.e. going from general rules to specific instances or reasoning.
-|-------------------------------------------------------|
-| Supervised Learning    | Function Approximation       |
-| Unsupervised Learning  | Function Description         |
-| Reinforcement Learning | Learning via Trial and Error |
-|-------------------------------------------------------|
+|---------------------------------------------------------------|
+| Supervised Learning    |         Function Approximation       |
+|---------------------------------------------------------------|
+| Unsupervised Learning  |          Function Description        |
+|---------------------------------------------------------------|
+| Reinforcement Learning | Learning Actions via Trial and Error |
+|---------------------------------------------------------------|
+
