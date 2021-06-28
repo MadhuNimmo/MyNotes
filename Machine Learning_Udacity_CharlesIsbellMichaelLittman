@@ -1,6 +1,7 @@
 ## Machine Learning
 
-# Lesson 1 - ML is the ROX
+# Lesson 1
+
 * ML is about building intelligent artifacts that learn overtime based on experience and also, the science, the math and the engineering behind it.
 * Supervised Learning is taking labelled datasets and gleaning infomartion so that you can label new datasets.
 * Unsupervised Learning is about deriving common patterns from the data available by looking at the relationships. 
@@ -15,4 +16,18 @@
 |---------------------------------------------------------------|
 | Reinforcement Learning | Learning Actions via Trial and Error |
 |---------------------------------------------------------------|
+
+# Lesson 2
+
+* Supervised Learning can be majorly calssified into Classification and Regression
+* Classification is about mapping inputs to discreete labels where as Regression is more about continuous value function.
+* Calssification Learning
+  - Instances : Inputs (pixels, discrete values)
+  - Concept : Functions or Mapping of input to output , Notions 
+  - Target Concept : Answer or What we are trying to find , Derived Notions
+  - Hypothesis : Set of all concepts we want to entertain
+  - Sample : Training Set, the pairings available
+  - Candidate : Concept that may be the Target Concept
+  - Testing Set : The set of data on which we try the Candidate concept to determine if it is the Target 
+* Decision Trees 
 
