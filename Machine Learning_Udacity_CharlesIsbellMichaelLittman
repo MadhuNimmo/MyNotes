@@ -33,4 +33,7 @@
   - Representaed as Tree
   - Like IF-ELSE statements
   - Deeper the tree, more complex it is
+* ID3
+  - Information gain - the mathematical way to capture the amount of infomation
+  that one gains by picking a particular attribute/ the reduction in randomness 
 
