@@ -30,4 +30,7 @@
   - Candidate : Concept that may be the Target Concept
   - Testing Set : The set of data on which we try the Candidate concept to determine if it is the Target 
 * Decision Trees 
+  - Representaed as Tree
+  - Like IF-ELSE statements
+  - Deeper the tree, more complex it is
 
