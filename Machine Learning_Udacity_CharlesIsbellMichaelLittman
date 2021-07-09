@@ -36,8 +36,12 @@
 * ID3
   - Information gain - the mathematical way to capture the amount of infomation
   that one gains by picking a particular attribute/ the reduction in randomness 
-  $$
-  Gain(S,A) = Entropy(S) - \sum_{i = 1}^{n}{(\bar{\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}} - x_i)^2}
-  $$
+  Entropy - Measure of randomness. A coin has zero bits of entory, beacuse we know for sure the probabaility of the outcome. But if I have more of one label than 
+  other 
+  Gain(S,A) = Entropy(S) - Average Entropy that we have over a set of examples with a particular value. 
+  ```math
+  a^2+b^2=c^2
+  ```
+  An attribute may have. abunch of values like short/tall which is represented by 'v'.
   
 
