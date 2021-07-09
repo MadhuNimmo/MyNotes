@@ -36,4 +36,8 @@
 * ID3
   - Information gain - the mathematical way to capture the amount of infomation
   that one gains by picking a particular attribute/ the reduction in randomness 
+  $$
+  Gain(S,A) = Entropy(S) - \sum_{i = 1}^{n}{(\bar{\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}} - x_i)^2}
+  $$
+  
 
