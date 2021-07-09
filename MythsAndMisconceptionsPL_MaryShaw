@@ -1,0 +1,39 @@
+* Our belief about PL arise for an idealized view that programming is the use of general purpose languages to create correct solutions to well-specified problems.
+* Myths:
+  - Professional programmers : Programs are written by highly skilled professionals. 
+    In fact, Vernecular software developers tend to outnumber the professional developers.
+    Profesional developers are trained, possess math & logic skills, have spend time learning languages and their models.
+    Vernecular Programmers create software for their own goals , work in specific context and start with ideas not specifications,may/may not have extensive training
+    VPs frequently program using trial-error method, and think in the concepts of their own domains not software concepts. They use tools and do not have clear understanding or purpose.
+ 
+  - The code is the software : Software is simply the symbolic program text. 
+    Its more of a coalition og elements from many sources with sketchy specifications and unannounced behavior change.
+    Myth is big programs are composed of smaller modules, data is not a big deal and the behaviour of the program only changes with code and other invoked libraries which change with the knowledge of the programmers.
+    But the fact is modern software is not like that, products depend on thir party libraries which may change wthout indications, so you have less control over the system than you think, 
+    there are also data elements , sensor elements and non-code parts which may be more vulnerable.
+    writing code is small part of developers' jobs, they spend considerable amount of time in scripting, finding 3rd party libs and othe stuff.
+    
+  - Purity - Mathematical Tractability , Correctness : Soundness , correctness of a software are essential. Formal Specifications too. 
+    In practice, Task-specific expresiveness is more important that anything else.
+    Languages have to to be mathematially pure and software have to be correct. In practial,
+    PL are designed to provide solutions to problems and this purpose has become increasingly important over the years.
+    The myth is that the languages are general, rich, sound and complete their reasoning uses formal logic and the people who 
+    use the language must have good math and logic skills. In real world, a minority of the programmers actually studied formal logic 
+    let alone retained formal math.
+    Software can be provably correct. Specifications are sufficient , complete , homogeneous static and purely functional. But, Proving correctness is 
+    usually too expensive and so are full formal specifications. Specifications are always incomplete heterogeneous evolving and non-monotonic.
+    Most softwares are built against these 'good enough' specifications.
+    
+  - AI is special : AI will break software development because it is so radically different. 
+    But in reality, the issues of concern from ML appear in conventional software where we actually have conventional ways to to deal with them.    
+    The myth is that we need a brand new software discipline to cope with them and people complain about
+    opacity about non determinism, about the massive amounts of data, inadequate speicifications and unpredictable interactions between components.
+    But the issues in ML actually resemble the issues the software field has addressed before.
+    Unnerving aspects of ML 
+      - ML algos can not explain their output
+      - Dynamic change and non determinism from fresh data
+      - Dominant role of data : Huge ML datasets require management
+      - Lack of specifications
+      - Unpredictable results
+    Lesson : To adapt the established techniques to the ML. 
+    
