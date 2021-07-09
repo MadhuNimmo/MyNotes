@@ -33,15 +33,23 @@
   - Representaed as Tree
   - Like IF-ELSE statements
   - Deeper the tree, more complex it is
-* ID3
+* ID3 - Top Down Approach to induce a DT
   - Information gain - the mathematical way to capture the amount of infomation
   that one gains by picking a particular attribute/ the reduction in randomness 
   Entropy - Measure of randomness. A coin has zero bits of entory, beacuse we know for sure the probabaility of the outcome. But if I have more of one label than 
-  other 
+  other  Summation{v} (P(v)logP(v)) Likelihood of already knowing what you are going to get. The goal is to choose the attribute for maximum gain.
   Gain(S,A) = Entropy(S) - Average Entropy that we have over a set of examples with a particular value. 
-  ```math
-  a^2+b^2=c^2
-  ```
   An attribute may have. abunch of values like short/tall which is represented by 'v'.
+  - Bias - 
+  Algorithms that are searching thru space mostly have 2 kinds of biases:
+      Restriction Bias: Hypothesis set that we actually care about. Like we only want to consider all Decision Trees here and no other representation.
+      Preference Bias: What source of hypothesis from this heypothesis do we prefer? Heart of inductive bias
+  Inductive Bias: 
+      Given two decision trees that are both correct , ID3 would prefer the one that had a better split near the top. Also, it pefers the correct over incorrect trees.
+      Which results in it prefering shorter trees to longer trees.
+* Other considerations : Continous attributes are difficult to represent. There may be noise in the data. Can we completely trust the training data? 
+  We can not entertain overfitting? To avoid overfitting, cross verify. Create a validation set may be. We can do pruning and see if it creates errors in the validation
+  set. There may be problem of regression , which raises the question of splitting, needs voting.
+  
   
 
