@@ -50,6 +50,18 @@
 * Other considerations : Continous attributes are difficult to represent. There may be noise in the data. Can we completely trust the training data? 
   We can not entertain overfitting? To avoid overfitting, cross verify. Create a validation set may be. We can do pruning and see if it creates errors in the validation
   set. There may be problem of regression , which raises the question of splitting, needs voting.
+
+# Lesson 3
+
+* Regression - Mapping continuous imputs to outputs.
+  We assume that their is a linear relationship. So, we try to find the best linear function that best captures the relationship between x-axis and y-axis variables.
+  We find a line that minimizes the squared deviation from the actual point on the axis to the imaginary linear function line.
+  Best fit line = least squared error. We do this through calculus.
+  The idea is to reduce the sum of squared error (best loss error). The mean of all the Ys reduces the squared error.
+  With more degrees of freedom or polynomial, we fit the error better. If the polynomial fits the training data too much, its kind of an overkill and may not perform well during testing.
+  The goal is to generalize. Cross Validation is the key. Split the training data into folds.
+  Train on n-1 chucnks and check 1 changing the folds everytime and find the average error, and go forward with the lowest error.
+  best constant in terms of squared error is the mean
   
   
 
