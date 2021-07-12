@@ -1,0 +1,21 @@
+We expect a BNF grammar for a language but some specifications are written in diff ways. like ecmascript.
+We want a formal semantics for defining a PL to verfiy no case is missing,verify its not unambiguous,can verify its defined decidable and deterministic,also generate an interoreter,can generate tests
+Formal semantics can prove compilers correct, pgms correct, equivalence, in depth verification, cleaner and simpler design.
+We do have formal syntax to verify no production is missing, unambiguous,can generate parser etc. 
+How did they apply this things to WebAssembly? A virtual CPU, that is fully sandboxed, and can be fully embeddable anywhere.
+not at all dependent on the web, defines the lang and the interfaces to it. A low-level VM.
+Goals: lang-ind,plat-ind, safety,determinictic,easy to reason,hardware-ind,fast
+Wasm formal semantics: a vm is just a lang,binary decoding - parsing, validation = type checking,all PL methods apply.
+what to do for define a lang? syntax(lexing,parsing) static semantics(scoping,typing) dynamic semantics(execution,evaluation)
+syntax -> AST <- static , dynamic semantics
+Dynamic Semantics - structured operational semantics, small step reduction rules, rewrite the program with each step.
+Wasm is a stack machine, the instructions push and pop arguments on to the stack.
+Control flow: 
+  Structured control flow: no arbtrary jumps, only blocks and loops.you can only branch to outside and not into something
+  Allows to define a lang more succintly
+
+
+
+
+
+Book to read : The definition of Standard ML Robin Milner
