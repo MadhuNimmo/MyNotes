@@ -88,9 +88,24 @@
       - create a docker file to write down the instructions for setting up an application in it
       - once done build your image using the docker build command and specify the docker file as input and a tage name foe the image
       - to make avaiable publicly use docker push command followed by accntname/imagename
-      - Docker file is a text file in inst and arg format
-      
-  -
-*
-*
-
+      - Docker file is a text file in inst and arg format 
+* CMD and ENTRYPOINTS
+  - CMD -> command and parameters can be provided as a list/json
+  - ENTRYPOINT -> has the command embedded, only need to pass the argument
+  - use both entry point and cmd in json format to have default option
+* Netwrking
+  - Bridge - default network, otherwise specify network using network=node/host
+    get internal ip address, they can access eachother using the ips, to access from outside, map the ports to docker host/
+    associate the container with the host network, remove any isolation between the host and container.
+  - None - not attached to any network. they run in an isolated network
+  - Host - 
+  - use network create/network inspect to create or adjust the settings
+  - containers can reach each other using their names
+* Storage
+  - var/lib/docker - stores all data by default
+  - only the container layer is read-write
+  - image layer is shared between containers and is read only
+  - all data for container gets deleted when its removed
+  - you can create a volume to store data beyond the life of the container
+  - you can also mount previously avaiable data for your use in your app
+* 
