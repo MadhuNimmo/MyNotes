@@ -1,0 +1,46 @@
+* Why do we need Docker? 
+  - Compatibility and Dependency between different services and the OS
+  - Long setup time
+  - Different dev/test/prod environments
+* What can it do?
+  - Allows us to change or modify the componenets without affecting the other componenets and even modify the 
+  underlying oS as required. With Docker we can run each componenet in a seprate container with its own dependencies
+  and its own libraries, all on the same VM and the OS, but within separate environments or containers.
+  Just build the Docker configuration once and all developers and use the same irrespective of their underlying system.
+  - Containerize apps
+  - Run each service with its own dependencies in separate containers
+* What are containers? 
+  - Completely isolated environments. As in they have their own processes or services, their own network interfaces, 
+  their own mounts, except they all share the same OS kernel.
+  - Containers has existed in the past as well.
+  - Docker uses LXC containers
+  - Setting up this containers is hard as they are very low level , and that is where docker 
+  comes useful. Docker offers a high level tool with several functionalities making it easy for us.
+* Basic Concepts of Operating System :
+  - every os consists of two things - an os kernel and a set of software
+  - kernel is responsible for interacting with the underlying hardware
+  - software above makes the OS different , the software may consist of a diff user interface drivers,
+  compilers, file managers, developer tools etc.
+  - Ubuntu, Fedore,Susi,CentOS - a common linux kernel shared across all OSS and some custom software that differentiate OSs from each other.
+  - Suppose we have a system with an ubuntu OS with docker installed on it. Docker can run any flavor of OS on it as long as they are based on the same kernel.
+    Dockeer only has the necessary software which make the OSs different and docker utilizes the underlying kernel of the docker host which works with all OSS above.
+    So, you cannot run a windows based container on a docker host with linux on it. For that we would need a Docker on a windows server.
+    But it is made possible in a way that, windows based container is run on a windows VM under the hoods. 
+* Containers VS Virual Machines :
+  - For Docker, we have the underlying infrastructure, the OS, and then Docker installed on the OS.Docker then manages the containers that 
+    run with dependencies and libraries alone. In case of VMs, we have the hypervisors like ESx on the hardware and then the VMs on them, each VM has its own OS upon it, then the dependencies and libraries 
+    and finally the applications.
+  - The overheard causes higher utilization of resources as there are multiple virtual operating systems and kernels running. The VMs also consumed 
+    higher disk space as each VM is heavy and usually in GB, whereas Docker is lighweight and in MBs. As a results, Docker containers boot up faster.
+  - Dockers have less isolation as the kernel is shared in comprison with the VMs. 
+* 
+* 
+*
+*
+* 
+*
+*
+* 
+*
+*
+
