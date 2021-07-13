@@ -108,4 +108,8 @@
   - all data for container gets deleted when its removed
   - you can create a volume to store data beyond the life of the container
   - you can also mount previously avaiable data for your use in your app
-* 
+* Compose
+  - link is used to rlate between two containers
+  - the compose.yml mentions the images,links and ports with already built images
+* Registry
+  - images org-user/img-name default storage is docker registry
