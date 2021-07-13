@@ -33,14 +33,64 @@
   - The overheard causes higher utilization of resources as there are multiple virtual operating systems and kernels running. The VMs also consumed 
     higher disk space as each VM is heavy and usually in GB, whereas Docker is lighweight and in MBs. As a results, Docker containers boot up faster.
   - Dockers have less isolation as the kernel is shared in comprison with the VMs. 
-* 
-* 
-*
-*
-* 
-*
-*
-* 
+* Containers & Virual Machines :
+  - You will often see containers provisioned on virtual docker hosts. That way we can utilize the advantages 
+  of both technologies, we can use the benefits of virtualization to easily provision or decommission Docker hosts as required
+  at the same time make use of the benefits of Docker to easily provision applications and quickly scale them as required. But, now 1 Vm
+  can support many applications.
+* How is it done?
+  - public Docker repo - Docker Hub / Docker Store
+  - Ex: we can find images of most common OSs, DBs and other services and tools. Once you identify the images we need and you have Docker in your host,
+    bringing up an app is as easy as a Docker run cmd. Docker run <<image>>
+  - If we need to run multiple instances of the web service , simply ass as many instances as you need and configure
+    a load balancer of some kind in the front. In case one instance fails, simply destroy it and launch anyone.
+    There are other solutions available.
+* Container vs Image
+  - An image is a package or template that is used to create one or more containers
+  - Containers are running instances of images that are isolated and have their own envs and set of processes.
+* Docker in DevOps
+  - With Docker developers and Ops team work hand in hand to transform guide in a Docker file with both of their requirements.
+    This Docker file is then used to craete an image, whioch now can run on any host in the same way everywhere.  
+* Docker Editions
+  - Community - free Docker products
+  - Enterprise - supported container platform with added support
+* Docker commands
+  - run followed by img-name -> start a container if an instance of the application already exists else it will pull the image down
+  - ps -> list all running containers and some basic info about them (cont id, cont name ...)
+  - ps -a -> list all containers running/not
+  - stop followed by container-name -> to stop a container from running
+  - rm followed by container-name -> to remove a container
+  - images -> list available images and their sizes
+  - rmi followed by img-name -> to remove an image
+  - pull followed by img-name -> to only download the image and store, not run a container
+  - exec followed by container and arguments-> to execute a command
+  - run followed by web-service -> to run a service on a host, attach the output to the console/std put of container.
+  - run -d followed by web-service -> will run the container in the background and you will be back to the prompt immediately
+  - attach followed by container id -> to attach back to the running container later
+* More on Run
+  - run XYZ:version -> version is also called tag, important when we need a specific version, no tag - latest version, docker hub will provide
+    all version details
+  - run -i XYZ -> for interactive running, when we need to provide input from console
+  - run -it XYX -> allows to attach a pseudo terminal and show prompts to receive inputs
+  - run -p 80:5000 XYZ-> to run an app on a server, to access it from a web browser, either use the ip of the docker container(only accessible by 
+    the docker host) or use the ip of the docker host , but to make that work you need to map the post inside the docker container to 
+    a free port on the docker host. here we map local port 80 to docker port 5000. You can run mutiple instances on diff ports as well.
+  - run -v ABC/DEF:WX:YZ-> stores all data/files/databases in container file system.To keep them even after you delete the container you need to 
+    map the container specific files to a directory outside the container. In this case, host file ABC/EFG is mapped to container file WX/YZ.
+  - inspect cont-name/cont-id -> add info on containers
+  - logs cont-name/cont-id -> to see the execution logs
+* Docker Environment Variables
+  - run -e Env-Var=Val XYZ-> to run an app with env vars set to certain values
+  - inspect XYZ -> to find the env vars under config
+* Docker Images
+  - how to create my own img? 
+      - write down teh instructions
+      - create a docker file to write down the instructions for setting up an application in it
+      - once done build your image using the docker build command and specify the docker file as input and a tage name foe the image
+      - to make avaiable publicly use docker push command followed by accntname/imagename
+      - Docker file is a text file in inst and arg format
+      
+  -
 *
 *
 
